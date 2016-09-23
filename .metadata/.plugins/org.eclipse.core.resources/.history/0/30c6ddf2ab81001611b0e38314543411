@@ -26,13 +26,13 @@
 			</f:selectItems>
 		</h:selectOneMenu>
 		<br />
-	<!-- 	<h:selectOneMenu value="#{professorBean.titulo}">
+		<h:selectOneMenu value="#{professorBean.titulo}">
 
 			<f:selectItems value="#{professorController.titulos}" var="s"
 				itemValue="#{s}" itemLabel="#{s.titulo}">
 			</f:selectItems>
 		</h:selectOneMenu>
-		<br /> -->
+		<br />
 		<h:outputText value="Instituicao de Ensino" />
 		<h:inputText value="#{professorBean.instituicaoEnsino}" />
 		<br />
