@@ -33,6 +33,7 @@ import com.accenture.academico.service.AlunoService;
 @ManagedBean(name = "alunoController")
 @SessionScoped
 public class AlunoController {
+	//teste
 
 	private List<Endereco> enderecos;
 	private List<Telefone> telefones;
