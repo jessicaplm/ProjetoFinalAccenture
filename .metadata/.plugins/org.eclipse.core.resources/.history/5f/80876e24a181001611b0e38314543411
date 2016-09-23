@@ -32,8 +32,8 @@ public class Aluno extends Pessoa{
 	@NotNull
 	private int matriculaAluno;
 		
-	@ManyToOne(optional=true)	
-//	@JoinColumn(name = "idPerson" , insertable=false, updatable=true)
+	@ManyToOne
+	@JoinColumn(name = "idPerson" , insertable=false, updatable=true)
 	private Professor professor;
 	
 	@OneToMany(mappedBy = "aluno", targetEntity = Publicacao.class, fetch = FetchType.LAZY )

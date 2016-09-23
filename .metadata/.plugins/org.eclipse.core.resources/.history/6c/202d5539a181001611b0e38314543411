@@ -34,7 +34,7 @@ public class Professor extends Pessoa {
 	@Column(length = 100)
 	private String titulacao;
 
-	@OneToMany(mappedBy = "professor")
+	@OneToMany(mappedBy = "professor", targetEntity = Aluno.class, fetch = FetchType.LAZY)
 	private List<Aluno> alunos;
 
 	@ManyToOne

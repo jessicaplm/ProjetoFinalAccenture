@@ -32,7 +32,8 @@ public class Aluno extends Pessoa{
 	@NotNull
 	private int matriculaAluno;
 		
-	@ManyToOne(optional=true)	
+	@ManyToOne
+	@NotNull
 //	@JoinColumn(name = "idPerson" , insertable=false, updatable=true)
 	private Professor professor;
 	

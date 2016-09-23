@@ -21,7 +21,9 @@ public class TituloServiceImpl implements TituloService {
 	public void setTituloDAO(TituloDAO tituloDAO) {
 		this.tituloDAO = tituloDAO;		
 	}
-
+	public void getTituloDAO(TituloDAO tituloDAO) {
+		this.tituloDAO = tituloDAO;		
+	}
 	@Override
 	@Transactional(readOnly = false)
 	public void addTitulo(Titulo t) {

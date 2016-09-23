@@ -131,12 +131,11 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 	<beans:bean id="professorService"
 		class="com.accenture.academico.service.ProfessorServiceImpl">
 		<beans:property name="professorDAO" ref="professorDAO"></beans:property>
-		
 	</beans:bean>
 	<beans:bean id="professorController"
 		class="com.accenture.academico.controller.ProfessorController">
 		<beans:property name="professorService" ref="professorService"></beans:property>
-	
+		<beans:property name="tituloService" ref="tituloService"></beans:property>
 
 	</beans:bean>
 
@@ -152,7 +151,6 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 	<beans:bean id="publicacaoService"
 		class="com.accenture.academico.service.PublicacaoServiceImpl">
 		<beans:property name="publicacaoDAO" ref="publicacaoDAO"></beans:property>
-		
 	</beans:bean>
 	<beans:bean id="publicacaoController"
 		class="com.accenture.academico.controller.PublicacaoController">
