@@ -1,0 +1,68 @@
+package com.accenture.academico.controller;
+
+import java.util.List;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+import org.springframework.stereotype.Controller;
+
+import com.accenture.academico.model.Aluno;
+import com.accenture.academico.model.Sexo;
+import com.accenture.academico.service.AlunoService;
+
+
+@Controller
+@ManagedBean(name="alunoController")
+@SessionScoped
+public class AlunoController {
+	
+	private Aluno aluno;
+	private AlunoService alunoService;
+	private Sexo sexoAluno;
+	
+	public void setAlunoService(AlunoService alunoService) {
+		this.alunoService = alunoService;
+	}
+
+	public void addAluno(Aluno a ){
+		
+		this.alunoService.addAluno(a);
+	}
+	
+	public List<Aluno> listAluno(){
+		
+		return this.alunoService.listAluno();
+	}
+	
+	
+	public void updateAluno(Aluno a){
+		
+		this.alunoService.updateAluno(a);
+	}
+	
+	public void removeAlunoById(int id ){
+		
+		this.alunoService.removeAlunoById(id);
+		
+	}
+
+	public Aluno getAluno() {
+		return aluno;
+	}
+
+	public void setAluno(Aluno aluno) {
+		this.aluno = aluno;
+	}
+
+	public Sexo getSexoAluno() {
+		return sexoAluno;
+	}
+
+	public void setSexoAluno(Sexo sexoAluno) {
+		this.sexoAluno = sexoAluno;
+	}
+
+
+	
+}

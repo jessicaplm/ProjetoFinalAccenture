@@ -1,0 +1,84 @@
+package com.accenture.academico.modelBeans;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+@ManagedBean(name="publicacaoBean")
+@SessionScoped
+public class Publicacao {
+
+	private int idPublicacao;
+	
+
+	private String tituloPublicacao;
+	
+
+	private String descricaoPublicacao;
+	
+
+	private int idAluno;
+
+	private int idProfessor;
+	
+	
+	private Aluno aluno;
+	
+	
+	private MeioComunicacao meioComunicacao;
+
+	public int getIdPublicacao() {
+		return idPublicacao;
+	}
+
+	public void setIdPublicacao(int idPublicacao) {
+		this.idPublicacao = idPublicacao;
+	}
+
+	public String getTituloPublicacao() {
+		return tituloPublicacao;
+	}
+
+	public void setTituloPublicacao(String tituloPublicacao) {
+		this.tituloPublicacao = tituloPublicacao;
+	}
+
+	public String getDescricaoPublicacao() {
+		return descricaoPublicacao;
+	}
+
+	public void setDescricaoPublicacao(String descricaoPublicacao) {
+		this.descricaoPublicacao = descricaoPublicacao;
+	}
+
+	public int getIdAluno() {
+		return idAluno;
+	}
+
+	public void setIdAluno(int idAluno) {
+		this.idAluno = idAluno;
+	}
+
+	public int getIdProfessor() {
+		return idProfessor;
+	}
+
+	public void setIdProfessor(int idProfessor) {
+		this.idProfessor = idProfessor;
+	}
+
+	public Aluno getAluno() {
+		return aluno;
+	}
+
+	public void setAluno(Aluno aluno) {
+		this.aluno = aluno;
+	}
+
+	public MeioComunicacao getMeioComunicacao() {
+		return meioComunicacao;
+	}
+
+	public void setMeioComunicacao(MeioComunicacao meioComunicacao) {
+		this.meioComunicacao = meioComunicacao;
+	}
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<h:html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Insert title here</title>
+</h:head>
+<h:body>
+
+
+	<h:outputText value="Nome" />
+	<h:inputText value="#{alunoController.aluno.nomePerson}" />
+	<br />
+	<h:outputText value="CPF" />
+	<h:inputText value="#{alunoController.aluno.cpfPerson}" />
+	<br />
+	<h:outputText value="Sexo" />
+	<h:selectOneMenu value="#{alunoController.aluno.sexoPerson}">
+
+		<f:selectItems value="#{alunoController.sexos}" var="s"
+			itemValue="#{s}" itemLabel="#{s.valor}">
+		</f:selectItems>
+	</h:selectOneMenu>
+	<br />
+
+	<h:outputText value="Endereco" />
+	<br />
+	<h:outputText value="Logradouro" />
+	<h:inputText value="#{alunoController.endereco.logradouro}" />
+	<br />
+	<h:outputText value="Numero" />
+	<h:inputText value="#{alunoController.endereco.numero}" />
+	<br />
+	<h:outputText value="Bairro" />
+	<h:inputText value="#{alunoController.endereco.bairro}" />
+	<br />
+	<h:outputText value="Cidade" />
+	<h:inputText value="#{alunoController.endereco.cidade}" />
+	<br />
+	<h:outputText value="UF" />
+	<h:inputText value="#{alunoController.endereco.uf}" disabled="true" />
+	<br />
+	
+	
+	
+	<h:outputText value="Telefone" />
+	<br />
+	<h:outputText value="DDD: " />
+	<h:inputText value="#{alunoController.telefone.ddd}" />
+	<h:inputText value="#{alunoController.telefone.telefone}" />
+	<br />
+
+
+</h:body>
+</h:html>

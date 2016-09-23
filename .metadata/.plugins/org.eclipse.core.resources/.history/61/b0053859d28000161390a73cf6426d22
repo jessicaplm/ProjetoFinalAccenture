@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/s…/context/spring-context.xsd
+http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+
+
+	<!-- Enables the Spring MVC @Controller programming model -->
+	<annotation-driven />
+
+	<resources mapping="/resources/**" location="/resources/" />
+
+	<beans:bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<beans:property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<beans:property name="url" value="jdbc:mysql://localhost:3306/sistemaAcademico" />
+		<beans:property name="username" value="root" />
+		<beans:property name="password" value="" />
+	</beans:bean>
+
+
+	<!-- Hibernate 4 SessionFactory Bean definition -->
+	<beans:bean id="hibernate4AnnotatedSessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<beans:property name="dataSource" ref="dataSource" />
+
+		<beans:property name="annotatedClasses">
+			<beans:list>
+				<!-- Adicionar as classes que quer que o hibernate gerencie inicio -->
+				<beans:value>com.accenture.academico.model.Aluno</beans:value> 
+				<beans:value>com.accenture.academico.model.Endereco</beans:value> 
+				<beans:value>com.accenture.academico.model.MeioComunicacao</beans:value> 
+				<beans:value>com.accenture.academico.model.Pessoa</beans:value> 
+				<beans:value>com.accenture.academico.model.Professor</beans:value> 
+				<beans:value>com.accenture.academico.model.Publicacao</beans:value> 
+				<beans:value>com.accenture.academico.model.Telefone</beans:value> 
+				<beans:value>com.accenture.academico.model.Titulo</beans:value> 
+								
+				<!-- Adicionar as classes que quer que o hibernate gerencie fim -->
+			</beans:list>
+		</beans:property>
+
+		<beans:property name="hibernateProperties">
+			<beans:props>
+				<beans:prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect
+				</beans:prop>
+				<beans:prop key="hibernate.show_sql">true</beans:prop>
+				<beans:prop key="hibernate.hbm2ddl.auto">update</beans:prop>
+			</beans:props>
+		</beans:property>
+
+	</beans:bean>
+
+
+	<!--colocar todas as classes DAO que tiverem session factory aqui inicio -->
+<!-- 	<beans:bean id="personDAO" class="dao.PersonDAOImpl">
+		<beans:property name="sessionFactory"
+			ref="hibernate4AnnotatedSessionFactory" />
+	</beans:bean>
+
+	<beans:bean id="personService" class="service.PersonServiceImpl">
+		<beans:property name="personDAO" ref="personDAO"></beans:property>
+	</beans:bean> -->
+
+	<!--colocar todas as classes DAO que tiverem session factory aqui fim -->
+
+
+
+
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+	<beans:bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<beans:property name="sessionFactory"
+			ref="hibernate4AnnotatedSessionFactory" />
+	</beans:bean>
+
+</beans:beans>	

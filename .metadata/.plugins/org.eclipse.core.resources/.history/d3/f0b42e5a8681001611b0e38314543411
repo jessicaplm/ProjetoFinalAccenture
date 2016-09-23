@@ -1,0 +1,44 @@
+package com.accenture.academico.modelBeans;
+
+import java.util.List;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+
+@ManagedBean(name="meioComunicacaoBean")
+@SessionScoped
+public class MeioComunicacao {
+
+	private int idMeioComunicacao;
+	
+	
+	private String descricao;
+	
+
+	private List<Publicacao> publicacoes;
+
+	public int getIdMeioComunicacao() {
+		return idMeioComunicacao;
+	}
+
+	public void setIdMeioComunicacao(int idMeioComunicacao) {
+		this.idMeioComunicacao = idMeioComunicacao;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public List<Publicacao> getPublicacao() {
+		return publicacoes;
+	}
+
+	public void setPublicacao(List<Publicacao> publicacao) {
+		this.publicacoes = publicacao;
+	}
+}

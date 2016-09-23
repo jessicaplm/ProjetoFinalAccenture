@@ -1,0 +1,35 @@
+package com.accenture.academico.controller;
+
+import java.util.List;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+import org.springframework.stereotype.Controller;
+import com.accenture.academico.model.Professor;
+import com.accenture.academico.service.ProfessorService;
+
+@Controller
+@ManagedBean
+@SessionScoped
+public class ProfessorController {
+	
+	
+	private ProfessorService professorService;
+	
+	public void setProfessorService(ProfessorService professorService) {
+		this.professorService = professorService;
+	}
+	
+	public void addProfessor(Professor p ){
+		this.professorService.addProfessor(p);
+	}
+	public List<Professor> listProfessor(){
+		return this.professorService.listProfessor();
+	}
+	public void updateProfessor(Professor p){
+		this.professorService.updateProfessor(p);
+	}
+	public void removeProfessorById(int id ){
+		this.professorService.removeProfessorById(id);
+	}
+}

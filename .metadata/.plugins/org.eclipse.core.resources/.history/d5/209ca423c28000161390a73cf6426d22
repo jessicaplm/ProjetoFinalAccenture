@@ -1,0 +1,14 @@
+package com.accenture.academico.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name="meioComunicacao")
+public class MeioComunicacao {
+
+	private int idMeioComunicacao;
+	private String descricao;
+	
+}

@@ -1,0 +1,98 @@
+package com.accenture.academico.controller;
+
+import java.util.List;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+import org.springframework.stereotype.Controller;
+
+
+
+
+
+
+
+import com.accenture.academico.modelBeans.Aluno;
+import com.accenture.academico.modelBeans.Cidade;
+import com.accenture.academico.modelBeans.Endereco;
+import com.accenture.academico.modelBeans.Sexo;
+import com.accenture.academico.modelBeans.Telefone;
+import com.accenture.academico.service.AlunoService;
+
+
+@Controller
+@ManagedBean(name="alunoController")
+@SessionScoped
+public class AlunoController {
+	
+	private Aluno aluno;
+	private Endereco endereco;
+	private Telefone telefone;
+	private AlunoService alunoService;
+	
+	public AlunoController(){
+		endereco = new Endereco();
+		endereco.setUf("PE");
+	}
+
+	public void setAlunoService(AlunoService alunoService) {
+		this.alunoService = alunoService;
+	}
+
+	public void addAluno(com.accenture.academico.model.Aluno a ){
+		
+		this.alunoService.addAluno(a);
+	}
+	
+	public List<com.accenture.academico.model.Aluno> listAluno(){
+		
+		return this.alunoService.listAluno();
+	}
+	
+	
+	public void updateAluno(com.accenture.academico.model.Aluno a){
+		
+		this.alunoService.updateAluno(a);
+	}
+	
+	public void removeAlunoById(int id ){
+		
+		this.alunoService.removeAlunoById(id);
+		
+	}
+
+	public Aluno getAluno() {
+		return aluno;
+	}
+
+	public void setAluno(Aluno aluno) {
+		this.aluno = aluno;
+	}
+
+
+	public Endereco getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
+	}
+
+	public Telefone getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(Telefone telefone) {
+		this.telefone = telefone;
+	}
+
+	public Sexo[] getSexos(){
+		return Sexo.values();
+	}
+	public Cidade[] getCidades(){
+		return Cidade.values();
+	}
+
+	
+}

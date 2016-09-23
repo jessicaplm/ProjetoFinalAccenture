@@ -1,0 +1,65 @@
+package com.accenture.academico.dao;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.accenture.academico.model.Aluno;
+import com.accenture.academico.model.Pessoa;
+
+public class PessoaDAOImpl implements PessoaDAO {
+
+	private static final Logger logger = LoggerFactory
+			.getLogger(PessoaDAOImpl.class);
+	private SessionFactory sessionFactory;
+
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+	}
+	
+	@Override
+	public void addPessoa(Pessoa p) {
+		// TODO Auto-generated method stub
+		Session session = this.sessionFactory.getCurrentSession();
+		session.persist(a);
+		logger.info("Aluno salva com sussesso no banco, detalhes= " + a);
+	}
+
+	@Override
+	public List<Pessoa> listPessoa() {
+		// TODO Auto-generated method stub
+		Session session = this.sessionFactory.getCurrentSession();
+		List<Aluno> alunoList = session.createQuery("from Aluno").list();
+		for (Aluno a : alunoList) {
+
+			logger.info("Aluno da lista= " + a);
+
+		}
+		return alunoList;
+	}
+
+	@Override
+	public void updatePessoa(Pessoa p) {
+		// TODO Auto-generated method stub
+		Session session = this.sessionFactory.getCurrentSession();
+		session.merge(a);
+
+		logger.info("pessoa atualizada Dados = " + a);
+	}
+
+	@Override
+	public void removePessoaById(int id) {
+		// TODO Auto-generated method stub
+		Session session = this.sessionFactory.getCurrentSession();
+		Aluno a = (Aluno) session.load(Aluno.class, new Integer(id));
+		if (null != a) {
+
+			session.delete(a);
+		}
+		logger.info("Pessoa deletada com sussesso, detalhes = " + a);
+	}
+
+}

@@ -1,0 +1,7 @@
+package com.accenture.academico.model;
+
+public enum TipoMeioComunicacao {
+
+	
+	Celular("Celular"),Tablet("Tablet"), Browser("Browser(Navegador)");
+}

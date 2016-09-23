@@ -1,0 +1,12 @@
+package com.accenture.academico.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name="titulo")
+public class Titulo {
+	private int idTitulo;
+	private String titulo;
+}

@@ -1,0 +1,5 @@
+package com.accenture.academico.dao;
+
+public interface AlunoDAO {
+
+}

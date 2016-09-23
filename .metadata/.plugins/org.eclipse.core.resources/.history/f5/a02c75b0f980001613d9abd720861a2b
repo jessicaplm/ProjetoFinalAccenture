@@ -1,0 +1,44 @@
+package com.accenture.academico.modelBeans;
+
+public class Telefone {
+
+	private int idTelefone;
+
+	private int ddd;
+
+	private int telefone;
+
+	private Pessoa pessoa;
+
+	public int getIdTelefone() {
+		return idTelefone;
+	}
+
+	public void setIdTelefone(int idTelefone) {
+		this.idTelefone = idTelefone;
+	}
+
+	public int getDdd() {
+		return ddd;
+	}
+
+	public void setDdd(int ddd) {
+		this.ddd = ddd;
+	}
+
+	public int getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(int telefone) {
+		this.telefone = telefone;
+	}
+
+	public Pessoa getPessoa() {
+		return pessoa;
+	}
+
+	public void setPessoa(Pessoa pessoa) {
+		this.pessoa = pessoa;
+	}
+}

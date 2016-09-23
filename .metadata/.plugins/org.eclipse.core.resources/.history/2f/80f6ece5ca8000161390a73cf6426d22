@@ -1,0 +1,47 @@
+package com.accenture.academico.dao;
+
+import java.util.List;
+
+import org.hibernate.SessionFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.accenture.academico.model.Aluno;
+
+import dao.PersonDAOImpl;
+
+public class AlunoDAOImpl implements AlunoDAO {
+
+	private static final Logger logger = LoggerFactory
+			.getLogger(AlunoDAOImpl.class);
+	private SessionFactory sessionFactory;
+
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+	}
+	
+	@Override
+	public void addAluno(Aluno a) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<Aluno> listAluno() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void updateAluno(Aluno a) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void removeAlunoById(int id) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

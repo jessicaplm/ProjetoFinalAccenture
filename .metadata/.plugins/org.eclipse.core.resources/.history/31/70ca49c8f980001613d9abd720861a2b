@@ -1,0 +1,40 @@
+package com.accenture.academico.modelBeans;
+
+import java.util.List;
+
+import javax.faces.bean.ManagedBean;
+
+@ManagedBean(name="alunoBean")
+public class Aluno extends Pessoa {
+
+	private int matriculaAluno;
+
+	private Professor professor;
+
+	private List<Publicacao> publicacoes;
+
+	public int getMatriculaAluno() {
+		return matriculaAluno;
+	}
+
+	public void setMatriculaAluno(int matriculaAluno) {
+		this.matriculaAluno = matriculaAluno;
+	}
+
+	public Professor getProfessor() {
+		return professor;
+	}
+
+	public void setProfessor(Professor professor) {
+		this.professor = professor;
+	}
+
+	public List<Publicacao> getPublicacao() {
+		return publicacoes;
+	}
+
+	public void setPublicacao(List<Publicacao> publicacao) {
+		this.publicacoes = publicacao;
+	}
+
+}

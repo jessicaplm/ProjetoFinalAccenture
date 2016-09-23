@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.accenture.academico.model.Endereco"/>
+<fullyQualifiedTypeName name="javax.faces.bean.ManagedBean"/>
+<fullyQualifiedTypeName name="javax.faces.bean.SessionScoped"/>
+<fullyQualifiedTypeName name="com.accenture.academico.modelBeans.Aluno"/>
+<fullyQualifiedTypeName name="com.accenture.academico.modelBeans.Sexo"/>
+<fullyQualifiedTypeName name="com.accenture.academico.controller.AlunoController"/>
+<fullyQualifiedTypeName name="com.accenture.academico.model.Aluno"/>
+<fullyQualifiedTypeName name="com.accenture.academico.modelBeans.Telefone"/>
+<fullyQualifiedTypeName name="com.accenture.academico.modelBeans.Endereco"/>
+<fullyQualifiedTypeName name="com.accenture.academico.modelBeans.Cidade"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+</qualifiedTypeNameHistroy>

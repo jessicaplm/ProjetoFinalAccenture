@@ -1,0 +1,100 @@
+package com.accenture.academico.model;
+
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity
+
+@Table(name="person")
+public class Pessoa {
+	
+	@Id	
+	@Column(name="idPerson")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int idPerson;
+	
+	@Column(name="nomePerson" ,
+			length=100, nullable=false)
+	private String nomePerson;
+	
+	@Column(name="cpfPerson", length=14)
+	private String cpfPerson;
+	
+	@Column(name="sexoPerson", nullable=false)
+	private Sexo sexoPerson;
+	
+	@Column(name="tipoPerson", nullable=false)
+	private TipoPessoa tipoPerson;
+	
+	
+	@OneToMany(mappedBy = "person", targetEntity = Endereco.class, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	private List<Endereco> enderecos;
+	
+	@OneToMany(mappedBy = "person", targetEntity = Telefone.class, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	private List<Telefone> telefone;
+
+	public int getIdPerson() {
+		return idPerson;
+	}
+
+	public void setIdPerson(int idPerson) {
+		this.idPerson = idPerson;
+	}
+
+	public String getNomePerson() {
+		return nomePerson;
+	}
+
+	public void setNomePerson(String nomePerson) {
+		this.nomePerson = nomePerson;
+	}
+
+	public String getCpfPerson() {
+		return cpfPerson;
+	}
+
+	public void setCpfPerson(String cpfPerson) {
+		this.cpfPerson = cpfPerson;
+	}
+
+	public Sexo getSexoPerson() {
+		return sexoPerson;
+	}
+
+	public void setSexoPerson(Sexo sexoPerson) {
+		this.sexoPerson = sexoPerson;
+	}
+
+	public TipoPessoa getTipoPerson() {
+		return tipoPerson;
+	}
+
+	public void setTipoPerson(TipoPessoa tipoPerson) {
+		this.tipoPerson = tipoPerson;
+	}
+
+	public List<Endereco> getEnderecos() {
+		return enderecos;
+	}
+
+	public void setEnderecos(List<Endereco> enderecos) {
+		this.enderecos = enderecos;
+	}
+
+	public List<Telefone> getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(List<Telefone> telefone) {
+		this.telefone = telefone;
+	}
+}

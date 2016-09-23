@@ -1,0 +1,27 @@
+package com.accenture.academico.controller;
+
+import java.util.List;
+
+import com.accenture.academico.model.Pessoa;
+import com.accenture.academico.service.AlunoService;
+import com.accenture.academico.service.PessoaService;
+
+public class PessoaController {
+	
+	private PessoaService pessoaService;
+	
+	
+	public void addPessoa(Pessoa p ){
+		
+	}
+	public List<Pessoa> listPessoa(){
+		return null;
+		
+	}
+	public void updatePessoa(Pessoa p){
+		
+	}
+	public void removePessoaById(int id ){
+		
+	}
+}

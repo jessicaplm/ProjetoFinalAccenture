@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<h:html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Insert title here</title>
+</h:head>
+<h:body>
+
+
+	<h:outputText value="Nome" />
+	<h:inputText value="#{alunoBean.nomePerson}" />
+	<br />
+	<h:outputText value="CPF" />
+	<h:inputText value="#{alunoBean.cpfPerson}" />
+	<br />
+	<h:outputText value="Sexo" />
+	<h:selectOneMenu value="#{alunoBean.sexoPerson}">
+
+		<f:selectItems value="#{alunoController.sexos}" var="s"
+			itemValue="#{s}" itemLabel="#{s.valor}">
+		</f:selectItems>
+	</h:selectOneMenu>
+	<br />
+
+	<h:outputText value="Endereco" /><br/>
+	<h:outputText value="CPF" />
+	<h:inputText value="#{enderecoBean.bairro}" /><br/>
+	<br />
+
+	<h:outputText value="Telefone" />
+
+
+</h:body>
+</h:html>

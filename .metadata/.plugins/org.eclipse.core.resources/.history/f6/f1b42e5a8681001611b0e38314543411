@@ -1,0 +1,86 @@
+package com.accenture.academico.modelBeans;
+
+import java.io.Serializable;
+import java.util.List;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+@ManagedBean(name="pessoaBean")
+@SessionScoped
+public class Pessoa implements Serializable {
+	
+
+
+	private int idPerson;
+	
+
+	private String nomePerson;
+	
+	private String cpfPerson;
+	
+	private Sexo sexoPerson;
+	
+	private TipoPessoa tipoPerson;
+	
+	
+	private List<Endereco> enderecos;
+
+	private List<Telefone> telefones;
+
+	public int getIdPerson() {
+		return idPerson;
+	}
+
+	public void setIdPerson(int idPerson) {
+		this.idPerson = idPerson;
+	}
+
+	public String getNomePerson() {
+		return nomePerson;
+	}
+
+	public void setNomePerson(String nomePerson) {
+		this.nomePerson = nomePerson;
+	}
+
+	public String getCpfPerson() {
+		return cpfPerson;
+	}
+
+	public void setCpfPerson(String cpfPerson) {
+		this.cpfPerson = cpfPerson;
+	}
+
+	public Sexo getSexoPerson() {
+		return sexoPerson;
+	}
+
+	public void setSexoPerson(Sexo sexoPerson) {
+		this.sexoPerson = sexoPerson;
+	}
+
+	public TipoPessoa getTipoPerson() {
+		return tipoPerson;
+	}
+
+	public void setTipoPerson(TipoPessoa tipoPerson) {
+		this.tipoPerson = tipoPerson;
+	}
+
+	public List<Endereco> getEnderecos() {
+		return enderecos;
+	}
+
+	public void setEnderecos(List<Endereco> enderecos) {
+		this.enderecos = enderecos;
+	}
+
+	public List<Telefone> getTelefone() {
+		return telefones;
+	}
+
+	public void setTelefone(List<Telefone> telefone) {
+		this.telefones = telefone;
+	}
+}

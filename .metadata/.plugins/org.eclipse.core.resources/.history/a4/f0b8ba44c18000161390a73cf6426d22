@@ -1,0 +1,10 @@
+package com.accenture.academico.model;
+
+public class Endereco {
+private int idEndereco;
+private String logradouro;
+private String bairro; 
+private int numero;
+private Cidade cidade;
+private String uf;
+}
