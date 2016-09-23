@@ -1,10 +1,13 @@
 package com.accenture.academico.controller;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.ExternalContext;
+import javax.faces.context.FacesContext;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -33,6 +36,7 @@ import com.accenture.academico.service.AlunoService;
 @ManagedBean(name = "alunoController")
 @SessionScoped
 public class AlunoController {
+	//teste
 
 	private List<Endereco> enderecos;
 	private List<Telefone> telefones;
@@ -68,6 +72,17 @@ public class AlunoController {
 		tel.setDdd(e.getDdd());
 		tel.setTelefone(e.getTelefone());
 		this.telefones.add(tel);
+	}
+	
+	public void seuMetodo() {
+	    ExternalContext externalContext = FacesContext.getCurrentInstance()
+	                .getExternalContext();
+	    try {
+	          externalContext.redirect(externalContext.getRequestContextPath()
+	                + "/cadastroAluno.xhtml");
+	    } catch (IOException e) {
+	          e.printStackTrace();
+	    }
 	}
 
 	public void addAluno(Aluno a) {
