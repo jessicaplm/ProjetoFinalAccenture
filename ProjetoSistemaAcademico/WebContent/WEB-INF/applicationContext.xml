@@ -68,6 +68,10 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 		class="com.accenture.academico.service.AlunoServiceImpl">
 		<beans:property name="alunoDAO" ref="alunoDAO"></beans:property>
 	</beans:bean>
+	<beans:bean id="alunoController"
+		class="com.accenture.academico.controller.AlunoController">
+		<beans:property name="alunoService" ref="alunoService"></beans:property>
+	</beans:bean>
 	<!--Auno -->
 
 	<!--Endereco -->
@@ -78,6 +82,10 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 	<beans:bean id="enderecoService"
 		class="com.accenture.academico.service.EnderecoServiceImpl">
 		<beans:property name="enderecoDAO" ref="enderecoDAO"></beans:property>
+	</beans:bean>
+	<beans:bean id="enderecoController"
+		class="com.accenture.academico.controller.EnderecoController">
+		<beans:property name="enderecoService" ref="enderecoService"></beans:property>
 	</beans:bean>
 	<!--Endereco -->
 
@@ -91,6 +99,10 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 		class="com.accenture.academico.service.MeioComunicacaoServiceImpl">
 		<beans:property name="meioComunicacaoDAO" ref="meioComunicacaoDAO"></beans:property>
 	</beans:bean>
+	<beans:bean id="meioComunicacaoController"
+		class="com.accenture.academico.controller.MeioComunicacaoController">
+		<beans:property name="meioComunicacaoService" ref="meioComunicacaoService"></beans:property>
+	</beans:bean>
 	<!--Meio Comunicacao -->
 
 	<!--pessoa -->
@@ -102,6 +114,10 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 	<beans:bean id="pessoaService"
 		class="com.accenture.academico.service.PessoaServiceImpl">
 		<beans:property name="pessoaDAO" ref="pessoaDAO"></beans:property>
+	</beans:bean>
+	<beans:bean id="pessoaController"
+		class="com.accenture.academico.controller.PessoaController">
+		<beans:property name="pessoaService" ref="pessoaService"></beans:property>
 	</beans:bean>
 	<!--Pessoa -->
 
@@ -116,6 +132,10 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 		class="com.accenture.academico.service.ProfessorServiceImpl">
 		<beans:property name="professorDAO" ref="professorDAO"></beans:property>
 	</beans:bean>
+	<beans:bean id="professorController"
+		class="com.accenture.academico.controller.ProfessorController">
+		<beans:property name="professorService" ref="professorService"></beans:property>
+	</beans:bean>
 	<!--Professor -->
 
 	<!--Publicacao -->
@@ -128,6 +148,10 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 		class="com.accenture.academico.service.PublicacaoServiceImpl">
 		<beans:property name="publicacaoDAO" ref="publicacaoDAO"></beans:property>
 	</beans:bean>
+	<beans:bean id="publicacaoController"
+		class="com.accenture.academico.controller.PublicacaoController">
+		<beans:property name="publicacaoService" ref="publicacaoService"></beans:property>
+	</beans:bean>
 	<!--Publicacao -->
 
 	<!--Telefone -->
@@ -139,6 +163,10 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 		class="com.accenture.academico.service.TelefoneServiceImpl">
 		<beans:property name="telefoneDAO" ref="telefoneDAO"></beans:property>
 	</beans:bean>
+	<beans:bean id="telefoneController"
+		class="com.accenture.academico.controller.TelefoneController">
+		<beans:property name="telefoneService" ref="telefoneService"></beans:property>
+	</beans:bean>
 	<!--Telefone -->
 
 	<!--Titulo -->
@@ -149,6 +177,10 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 	<beans:bean id="tituloService"
 		class="com.accenture.academico.service.TituloServiceImpl">
 		<beans:property name="tituloDAO" ref="tituloDAO"></beans:property>
+	</beans:bean>
+	<beans:bean id="TituloController"
+		class="com.accenture.academico.controller.TituloController">
+		<beans:property name="tituloService" ref="tituloService"></beans:property>
 	</beans:bean>
 	<!--Titulo -->
 

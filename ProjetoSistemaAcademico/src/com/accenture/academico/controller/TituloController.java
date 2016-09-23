@@ -15,6 +15,8 @@ import com.accenture.academico.service.TituloService;
 @SessionScoped
 public class TituloController {
 
+	
+	
 	private Titulo titulo;
 	private TituloService tituloService;
 
@@ -22,19 +24,20 @@ public class TituloController {
 		this.tituloService= tituloService;
 	}
 	
+	
 	public void addTitulo(Titulo t) {
 		this.tituloService.addTitulo(t);
 	}
 
-	public List<Titulo> listEndereco() {
+	public List<Titulo> listTitulo() {
 		return this.tituloService.listTitulo();
 	}
 
-	public void updateEndereco(Titulo t) {
+	public void updateTitulo(Titulo t) {
 		this.tituloService.updateTitulo(t);
 	}
 
-	public void removeEndereco(int id){
+	public void removeTitulo(int id){
 		this.tituloService.removeTituloById(id);
 	}
 

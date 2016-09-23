@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<h:html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Insert title here</title>
+</h:head>
+<h:body>
+
+	<h:form>
+
+		<h:outputText value="Nome" />
+		<h:inputText value="#{professorBean.nomePerson}" />
+		<br />
+		<h:outputText value="CPF" />
+		<h:inputText value="#{professorBean.cpfPerson}" />
+		<br />
+		<h:outputText value="Sexo" />
+		<h:selectOneMenu value="#{professorBean.sexoPerson}">
+
+			<f:selectItems value="#{professorController.sexos}" var="s"
+				itemValue="#{s}" itemLabel="#{s.valor}">
+			</f:selectItems>
+		</h:selectOneMenu>
+		<br />
+		<h:selectOneMenu value="#{professorBean.titulo}">
+
+			<f:selectItems value="#{tituloService.listTitulo()}" var="s"
+				itemValue="#{s}" itemLabel="#{s.titulo}">
+			</f:selectItems>
+		</h:selectOneMenu>
+		<br />
+		<h:outputText value="Instituicao de Ensino" />
+		<h:inputText value="#{professorBean.instituicaoEnsino}" />
+		<br />
+
+		<h:outputText value="Endereco" />
+		<br />
+		<h:outputText value="Logradouro" />
+		<h:inputText value="#{enderecoBean.logradouro}" />
+		<br />
+		<h:outputText value="Numero" />
+		<h:inputText value="#{enderecoBean.numero}" />
+		<br />
+		<h:outputText value="Bairro" />
+		<h:inputText value="#{enderecoBean.bairro}" />
+		<br />
+		<h:outputText value="Cidade" />
+		<h:selectOneMenu value="#{enderecoBean.cidade}">
+			<f:selectItems value="#{professorController.cidades}" var="c"
+				itemValue="#{c}" itemLabel="#{c.valor}">
+			</f:selectItems>
+		</h:selectOneMenu>
+		<br />
+		<h:outputText value="UF" />
+		<h:inputText value="#{enderecoBean.uf}" disabled="true" />
+		<br />
+		<h:commandButton value="Adicionar Endereco"
+			action="#{professorController.addEnderecosList(enderecoBean)}"></h:commandButton>
+
+
+		<h:dataTable value="#{professorController.enderecos}" var="end">
+
+			<h:column headerText="Logradouro">
+				<h:outputText value="#{end.logradouro}" />
+			</h:column>
+
+			<h:column headerText="Numero">
+				<h:outputText value="#{end.numero}" />
+			</h:column>
+
+			<h:column headerText="Bairro">
+				<h:outputText value="#{end.bairro}" />
+			</h:column>
+
+			<h:column headerText="Cidade">
+				<h:outputText value="#{end.cidade}" sortBy="#{end.cidade}" />
+			</h:column>
+
+			<h:column headerText="UF">
+				<h:outputText value="#{end.uf}" />
+			</h:column>
+		</h:dataTable>
+
+
+
+
+		<h:outputText value="Adicionar Telefone" />
+		<br />
+		<h:outputText value="DDD: " />
+		<h:inputText value="#{telefoneBean.ddd}" />
+		<h:inputText value="#{telefoneBean.telefone}" />
+		<br />
+		<h:commandButton value="Adicionar Telefone"
+			action="#{professorController.addTelefonesList(telefoneBean)}">
+
+		</h:commandButton>
+		<h:dataTable value="#{professorController.telefones}" var="tel">
+			<h:column headerText="DDD">
+				<h:outputText value="#{tel.ddd}" sortBy="#{tel.ddd}" />
+			</h:column>
+			<h:column headerText="Numero">
+				<h:outputText value="#{tel.telefone}" />
+			</h:column>
+		</h:dataTable>
+		<br />
+		<h:commandButton value="Adicionar Aluno"
+			action="#{professorController.addProfessor(professorBean)}">
+		</h:commandButton>
+	</h:form>
+	<br />
+
+
+
+</h:body>
+</h:html>

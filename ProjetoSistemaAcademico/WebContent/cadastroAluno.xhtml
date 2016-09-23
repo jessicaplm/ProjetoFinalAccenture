@@ -66,7 +66,7 @@
 			</h:column>
 			
 			<h:column headerText="Cidade">
-				<h:outputText value="#{end.cidade}" sortBy="#{end.cidade}" />
+				<h:outputText value="#{end.cidade}"  />
 			</h:column>
 			
 			<h:column headerText="UF">
@@ -89,7 +89,7 @@
 		</h:commandButton>
 		<h:dataTable value="#{alunoController.telefones}" var="tel">
 			<h:column headerText="DDD">
-				<h:outputText value="#{tel.ddd}" sortBy="#{tel.ddd}" />
+				<h:outputText value="#{tel.ddd}"  />
 			</h:column>
 			<h:column headerText="Numero" >
 				<h:outputText value="#{tel.telefone}" />

@@ -8712,3 +8712,45 @@ Java Model Exception: Java Model Status [Telefone [in Telefone.java [in com.acce
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
 !SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-09-23 10:00:46.163
 !MESSAGE Telefone [in Telefone.java [in com.accenture.academico.modelBeans [in src [in ProjetoSistemaAcademico]]]] does not exist
+
+!ENTRY org.eclipse.ui 4 4 2016-09-23 11:22:28.865
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.disable.grammar.constraints
+
+!ENTRY org.eclipse.ui 4 4 2016-09-23 11:22:28.869
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.reload.dependencies
+
+!ENTRY org.eclipse.ui 4 4 2016-09-23 11:22:28.870
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.disable.grammar.constraints
+
+!ENTRY org.eclipse.ui 4 4 2016-09-23 11:22:28.871
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.reload.dependencies
+
+!ENTRY org.eclipse.ui 4 4 2016-09-23 11:22:28.872
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.disable.grammar.constraints
+
+!ENTRY org.eclipse.ui 4 4 2016-09-23 11:22:28.872
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.reload.dependencies
+
+!ENTRY org.eclipse.jface 2 0 2016-09-23 11:35:34.925
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-09-23 11:35:34.925
+!MESSAGE A conflict occurred for CTRL+F5:
+Binding(CTRL+F5,
+	ParameterizedCommand(Command(org.eclipse.jdt.debug.ui.commands.StepIntoSelection,Step Into Selection,
+		Step into the current selected statement,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6f85ee02,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.debugging,,,system)
+Binding(CTRL+F5,
+	ParameterizedCommand(Command(org.eclipse.ui.part.nextPage,Next Page,
+		Switch to the next page,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@200eca94,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jst.jsf.facesconfig.editorContext,,,system)
+
+!ENTRY org.eclipse.wst.server.core 4 0 2016-09-23 11:46:22.302
+!MESSAGE Server Tomcat v7.0 Server at localhost was unable to start within 45 seconds. If the server requires more time, try increasing the timeout in the server editor.
