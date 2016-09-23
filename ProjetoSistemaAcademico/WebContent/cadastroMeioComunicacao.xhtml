@@ -1,13 +1,68 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<title>Insert title here</title>
-</head>
-<body>
+<h:head>
+	<title>Meios de Comunicação</title>
+	<style type="text/css">
+.tg {
+	border-collapse: collapse;
+	border-spacing: 0;
+	border-color: #ccc;
+}
 
-</body>
+.tg td {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	padding: 10px 5px;
+	border-style: solid;
+	border-width: 1px;
+	overflow: hidden;
+	word-break: normal;
+	border-color: #ccc;
+	color: #333;
+	background-color: #fff;
+}
+
+.tg th {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	padding: 10px 5px;
+	border-style: solid;
+	border-width: 1px;
+	overflow: hidden;
+	word-break: normal;
+	border-color: #ccc;
+	color: #333;
+	background-color: #f0f0f0;
+}
+
+.tg .tg-4eph {
+	background-color: #f9f9f9
+}
+</style>
+</h:head>
+<h:body>
+	<br />
+	<h3>Tipos de Meios de Comunicação</h3>
+</h:body>
+
+<h:form>
+
+	<h:outputText value="Meio de comunicação" />
+	<h:selectOneMenu value="#{meioComunicacao.tipoMeioComunicacao}">
+
+		<f:selectItems
+			value="#{meioComunicacaoController.tipoMeioComunicacao}" var="s"
+			itemValue="#{s}" itemLabel="#{s.valor}">
+		</f:selectItems>
+	</h:selectOneMenu>
+	
+	<h:commandButton value="Confirmar"></h:commandButton>
+
+</h:form>
 </html>
